@@ -1,18 +1,23 @@
 import React from "react";
+import { Container, Main } from "./style";
 import Footer from "../../components/Footer/index";
 import Header from "../../components/Header/index";
 import LatestMovieSection from "../../features/movie/latest";
 import NowPlayingSection from "../../features/movie/nowPlaying";
 
-function MainPage() {
+const MainPage: React.FC = () => {
   return (
-    <div>
+    <>
       <Header />
-      <LatestMovieSection />
-      <NowPlayingSection />
+      <Main>
+        <Container>
+          <LatestMovieSection />
+          <NowPlayingSection />
+        </Container>
+      </Main>
       <Footer />
-    </div>
+    </>
   );
-}
+};
 
 export default MainPage;

@@ -16,7 +16,7 @@ const NowPlayingSection: React.FC = () => {
         <div> Loading... </div>
       ) : (
         <Slider>
-          {data.data.results.map((movie) => (
+          {data?.data?.results.map((movie) => (
             <Card
               key={movie.id}
               linkUrl={`/movie/${movie.id}`}
