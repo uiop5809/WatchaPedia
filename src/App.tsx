@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import MainPage from "./pages/MainPage";
-import TvDetail from "./pages/TvDetail";
-import TvPage from "./pages/TvPage";
-import MovieDetail from "./pages/MovieDetail";
+import MainPage from "./pages/Main/MainPage";
+import TvDetail from "./pages/Tv/TvDetail";
+import TvPage from "./pages/Tv/TvPage";
+import MovieDetail from "./pages/Movie/MovieDetail";
 
 function App() {
   return (

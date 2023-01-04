@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "./../components/Footer/index";
-import Header from "./../components/Header/index";
+import Footer from "../../components/Footer/index";
+import Header from "../../components/Header/index";
 
 function MainPage() {
   return (
