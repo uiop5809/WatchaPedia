@@ -1,7 +1,7 @@
 import { axiosInstance as axios } from "./axiosInstance";
 
 // 최근 상영작
-export const latestAPI = () => axios.get("/movie/latest");
+export const latestApi = () => axios.get("/movie/latest");
 
 // 개봉 예정작
 export const upcomingApi = () => axios.get("/movie/upcoming");
