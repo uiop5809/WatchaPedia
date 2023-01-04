@@ -4,6 +4,7 @@ import Footer from "../../components/Footer/index";
 import Header from "../../components/Header/index";
 import LatestMovieSection from "../../features/movie/latest";
 import NowPlayingSection from "../../features/movie/nowPlaying";
+import PopularSection from "../../features/movie/popular";
 
 const MainPage: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const MainPage: React.FC = () => {
         <Container>
           <LatestMovieSection />
           <NowPlayingSection />
+          <PopularSection />
         </Container>
       </Main>
       <Footer />
