@@ -3,6 +3,9 @@ import ReactSlider, { Settings } from "react-slick";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import ArrowButton from "./styles";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 interface Props {
   settings?: Settings;
   children?: React.ReactNode;
