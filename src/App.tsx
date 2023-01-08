@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import TvDetail from "./pages/TvPage/TvDetail/index";
-import TvPage from "./pages/TvPage/TvPage";
+import TvPage from "./pages/TvPage";
 import MovieDetail from "./pages/MoviePage";
 
 function App() {
