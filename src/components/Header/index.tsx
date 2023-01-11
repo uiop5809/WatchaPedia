@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
+import useMovieSearch from "../../hooks/movie/search/useMovieSearch";
 import {
   Base,
   Navigation,
@@ -17,12 +18,21 @@ import {
   SearchInput,
   SignIn,
   SignUp,
+  SearchResultWrapper,
+  SearchResultList,
+  SearchResultListItem,
 } from "./style";
 
 const Header: React.FC = () => {
-  const handleKeyword = () => {
-    console.log("keyword");
+  const [searchKeyword, setSearchKeyword] = useState<string>("");
+  const pathname = window.location.pathname;
+  const isTv = pathname.indexOf("tv") > -1;
+
+  const handleKeyword = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setSearchKeyword(e.target.value);
   };
+
+  const { data: searchResult } = useMovieSearch(searchKeyword);
 
   return (
     <Base>
@@ -61,6 +71,16 @@ const Header: React.FC = () => {
                   </SearchForm>
                 </SearchFormWrapper>
               </SearchContainer>
+
+              <SearchResultWrapper>
+                <SearchResultList>
+                  {searchResult?.data.results.map((item) => (
+                    <Link key={item.id} href={`/movie/${item.id}`}>
+                      <SearchResultListItem>{item.title}</SearchResultListItem>
+                    </Link>
+                  ))}
+                </SearchResultList>
+              </SearchResultWrapper>
             </SearchMenu>
 
             <Menu>
